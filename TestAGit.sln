@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.35931.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestAGit", "TestAGit.csproj", "{86FC8A9D-02C6-46B4-997B-D76C79B38799}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86FC8A9D-02C6-46B4-997B-D76C79B38799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86FC8A9D-02C6-46B4-997B-D76C79B38799}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86FC8A9D-02C6-46B4-997B-D76C79B38799}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86FC8A9D-02C6-46B4-997B-D76C79B38799}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {868305A0-45AE-4DB9-8AEC-B702486027C2}
+	EndGlobalSection
+EndGlobal

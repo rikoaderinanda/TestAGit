@@ -1,0 +1,91 @@
+<div class="modal fade" id="ModalPlan" tabindex="-1" aria-labelledby="ModalPlanLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-sm-down">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addPlanModalLabel">Create New Plan</h5>
+                <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close"><i
+                        class="bi bi-x-lg"></i></button>
+            </div>
+            <div class="modal-body p-3">
+                <!-- App Body Start -->
+                <div class="app-body pb-30">
+                    <div class="container">
+                        <div class="row">
+                            <p>
+                                <span id="txtIdLog"></span>
+                                <br>
+                                Diajukan oleh : <span id="txtUser"></span>
+                            </p>
+                            
+                            <div class="col-12" id="frmPlan">
+                                <div class="home-cart mt-0">
+                                    <div class="delivery-dts">
+                                        <div class="row">
+                                            <div class="col-12 px-0">
+                                                <input type="text" id="txtId" hidden></input>
+                                                <div class="p-3">
+                                                    <div class="row g-3">
+                                                        <div class="col-6">
+                                                            <label for="planDateFrom"
+                                                                class="form-label fs-7 fw-5">Awal</label>
+                                                            <input type="date" id="planDateFrom" name="planDateFrom"
+                                                                class="form-input input-shadow h_40 br-8 w-100" />
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <label for="planDateTo"
+                                                                class="form-label fs-7 fw-5">Akhir</label>
+                                                            <input type="date" id="planDateTo" name="planDateTo"
+                                                                class="form-input input-shadow h_40 br-8 w-100" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="alertHari" class="alert alert-danger" role="alert">Silahkan
+                                                    set tanggal Awal dan Akhir</div>
+                                                <div class="p-3 d-none" id="jumlahUnitContainer">
+                                                    <label class="form-label fs-7 fw-5 mb-2">Jumlah Unit per Hari</label>
+                                                    <div class="row g-2">
+                                                        @{
+                                                            var days = new[] { "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu" };
+                                                        }
+                                                        @for (int i = 0; i < days.Length; i++)
+                                                        {
+                                                            <div class="col-12 d-flex align-items-center">
+                                                                <div class="me-auto" style="width: 80px;">@days[i]</div>
+                                                                <div class="input-group" style="max-width: 140px;">
+                                                                    <button class="btn btn-outline-secondary btn-sm" type="button" onclick="adjustValue('@days[i]', -1)">-</button>
+                                                                    <input type="number" name="jumlahUnit[@days[i]]" id="input-@days[i]" class="form-control form-control-sm text-center" value="0" min="0" />
+                                                                    <button class="btn btn-outline-secondary btn-sm" type="button" onclick="adjustValue('@days[i]', 1)">+</button>
+                                                                </div>
+                                                            </div>
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer -->
+                <div class="gobo-custom-footer gobo-shadow fixed-bottom m-0 px-2 py-2 text-center"></div>
+                    <div class="container p-0">
+                        <div class="row">
+                            <div class="col">
+                                <button id="btnSimpanDuluForm" class="save-btn w-100 fw-4 h_40 br-8">
+                                    <i class="bi bi-heart me-2"></i>Simpan dulu
+                                </button>
+                            </div>
+                            <div class="col">
+                                <button id="btnValidateForm" class="main-btn btn-hover w-100 fw-4 h_40 br-8"><i
+                                        class="bi bi-credit-card me-2"></i>Submit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer End -->
+            </div>
+        </div>
+    </div>
+</div>

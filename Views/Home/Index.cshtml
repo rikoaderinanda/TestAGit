@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    ViewData["Header"] = "1";
+    ViewData["Footer"] = "1";
+}
+
+@await Html.PartialAsync("_ModalTambahPlan")
+<div class="app-body pb-30">
+    <div class="container mt-30 mb-30">
+        <div id="ListPlaning"></div>
+    </div>
+    <a href="#ModalPlan" data-bs-toggle="modal" data-action="new" id="btnTambahPlan" class="btn shadow-lg"
+        title="Buat Pesanan Baru" style="position: fixed; bottom: 90px; right: 24px; 
+            width: 56px; height: 56px; border-radius: 50%; 
+            display: flex; align-items: center; justify-content: center; 
+            z-index: 999;
+            background-color: red; color: white;
+            ">
+        <i class="bi bi-plus" style="
+                font-size: 1.5rem;
+                color: white;
+            "></i>
+    </a>
+</div>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            // Inisialisasi modal
+            var user = localStorage.getItem('user');
+            if (user === 'Asep') {
+                GetPlanning(0);
+            }
+            else{
+                GetPlanning(1);
+            }
+        });        
+    </script>
+}
+
