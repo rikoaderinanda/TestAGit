@@ -235,7 +235,7 @@ function GetPlanning(filterValue) {
 	$.getJSON('/api/Planning/GetPlan/'+filterValue, function (data) {
 		SkeletonLoadingListPlan();
 		var html = $.map(data, function (item) {
-			var status = item.status;
+			var status = item.Status;
 			var scr = "";
 			if(user =="Asep"){
 				scr = 
